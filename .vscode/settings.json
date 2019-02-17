@@ -1,0 +1,4 @@
+{
+    "python.pythonPath": "djangoenv\\Scripts\\python.exe",
+    "python.linting.pylintEnabled": true
+}
