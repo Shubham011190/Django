@@ -7,8 +7,8 @@ class Topic(models.Model):
         return self.topic_name
 
 class WebPage(models.Model):
-    topic=models.ForeignKey(Topic)
-    name=models.CharField(max_length=264, unique=True)
+    topic= models.ForeignKey('Topic',on_delete=models.PROTECT)
+    name= models.CharField(max_length=264, unique=True)
     url= models.URLField(unique=True)
 
     def __str__(self):
