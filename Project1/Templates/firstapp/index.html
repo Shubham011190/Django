@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Model-Template-Views Paradigm</title>
+    <h1>Welcome to Django MTV Paradigm</h1>
+    <h2>Given below are the access records:-</h2>
+    <div class="djangoMTV">
+
+      {% if dates %}
+      <table>
+        <thead>
+          <th>URL list</th>
+          <th>Date accessed</th>
+        </thead>
+        {% for d in dates %}
+        <tbody>
+          <td>{{ d.name }}</td>
+          <td>{{ d.date }}</td>
+        </tbody>
+        {% endfor %}
+      </table>
+      {% else %}
+      <p>No Records Found!!</p>
+      {% endif %}
+
+    </div>
+  </head>
+  <body>
+
+  </body>
+</html>
