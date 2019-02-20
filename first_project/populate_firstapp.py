@@ -5,7 +5,7 @@ import django
 django.setup()
 
 import random
-from firstapp.models import Topic,WebPage
+from firstapp.models import Topic,WebPage,AccessRecord
 from faker import Faker
 
 fakegen= Faker()
@@ -23,7 +23,10 @@ def populate(N=5):
         fakeName=fakegen.company()
         fakeUrl=fakegen.url()
 
-        webpg=WebPage.objects.get_or_create(topic=top, name=fakeName,url=fakeUrl)
+        webpg=WebPage.objects.get_or_create(topic=top, name=fakeName,url=fakeUrl)[0]
+
+        fakeDate= fakegen.date()
+        accessRec=AccessRecord.objects.get_or_create(name=fakeName,date=fakeDate)[0]
 
 if __name__=='__main__':
     print('Populating !')

@@ -14,6 +14,13 @@ class WebPage(models.Model):
     def __str__(self):
         return self.name
 
+class AccessRecord(models.Model):
+    name=models.ForeignKey('WebPage',on_delete=models.PROTECT)
+    date=models.DateField()
+
+    def __Str__(self):
+        return str(self.date)
+
 
 
 # Create your models here.
