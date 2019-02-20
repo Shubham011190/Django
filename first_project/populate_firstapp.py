@@ -22,10 +22,9 @@ def populate(N=5):
 
         fakeName=fakegen.company()
         fakeUrl=fakegen.url()
+        fakeDate=fakegen.date()
 
         webpg=WebPage.objects.get_or_create(topic=top, name=fakeName,url=fakeUrl)[0]
-
-        fakeDate= fakegen.date()
         accessRec=AccessRecord.objects.get_or_create(name=fakeName,date=fakeDate)[0]
 
 if __name__=='__main__':
