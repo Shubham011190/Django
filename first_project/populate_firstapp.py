@@ -24,8 +24,8 @@ def populate(N=5):
         fakeUrl=fakegen.url()
         fakeDate=fakegen.date()
 
-        webpg=WebPage.objects.get_or_create(topic=top, name=fakeName,url=fakeUrl)
-        accessRec=AccessRecord.objects.get_or_create(name=fakeName,date=fakeDate)
+        webpg=WebPage.objects.get_or_create(topic=top, name=fakeName,url=fakeUrl)[0]
+        accessRec=AccessRecord.objects.get_or_create(name=webpg,date=fakeDate)
 
 if __name__=='__main__':
     print('Populating !')
