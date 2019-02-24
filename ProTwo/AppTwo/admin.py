@@ -1,5 +1,5 @@
 from django.contrib import admin
-from ProTwo.models import User
+from AppTwo.models import User
 
 admin.site.register(User)
 
