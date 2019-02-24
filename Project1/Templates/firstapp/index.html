@@ -4,6 +4,9 @@
   <head>
     <meta charset="utf-8">
     <title>Model-Template-Views Paradigm</title>
+
+  </head>
+  <body>
     <h1>Welcome to Django MTV Paradigm</h1>
     <h2>Given below are the access records:-</h2>
     <div class="djangoMTV">
@@ -15,10 +18,10 @@
           <th>Date accessed</th>
         </thead>
         {% for d in dates %}
-        <tbody>
+        <tr>
           <td>{{ d.name }}</td>
           <td>{{ d.date }}</td>
-        </tbody>
+        </tr>
         {% endfor %}
       </table>
       {% else %}
@@ -26,8 +29,6 @@
       {% endif %}
 
     </div>
-  </head>
-  <body>
 
   </body>
 </html>
