@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{% load staticfiles %}
+  <head>
+    <meta charset="utf-8">
+    <title>Users</title>
+  </head>
+  <body>
+    <h1>Welcome!!</h1>
+    <form method="post">
+      {{ form.as_p }}
+      {% csrf_token %}
+      <input type="submit" name="submitBtn" value="Submit">
+
+    </form>
+    <!-- <h2>Here is the list:-</h2>
+
+    <div class="UsersDisp">
+      {% if userdict %}
+      <table>
+        <thead>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>E-mail</th>
+        </thead>
+
+        {% for users in userdict %}
+        <tbody>
+          <td>{{ users.firstName }}</td>
+          <td>{{ users.lastName }}</td>
+          <td>{{ users.email }}</td>
+        </tbody>
+        {% endfor %}
+      </table>
+      {% endif %}
+
+    </div> -->
+
+  </body>
+</html>

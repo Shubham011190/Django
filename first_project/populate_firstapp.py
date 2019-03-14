@@ -29,5 +29,5 @@ def populate(N=5):
 
 if __name__=='__main__':
     print('Populating !')
-    populate(30)
+    populate(50)
     print('Population Complete!!')
